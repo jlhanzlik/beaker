@@ -486,7 +486,7 @@ def deserialize(data_string, method):
 
 
 def machine_identifier():
-    machine_hash = hashlib.md5()
+    machine_hash = hashlib.sha1()
     if not PY2:
         machine_hash.update(socket.gethostname().encode())
     else:
